@@ -7,11 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="shapes.js"></script>
+    <script src="trig.js"></script>
     <script src="main.js"></script>
+    <style>
+        button,
+        input,
+        p {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <canvas id="myCanvas" width="800px" height="600px"></canvas>
+    <br>
+    <button onclick="restart()">Restart</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="play()">Play</button>
+    <br><br>
+    <input type="number" placeholder="Velocity" id="velocity">
+    <p>Monkey Position:
+        (<input type="number" placeholder="Monkey X" id="monkeyx">,
+        <input type="number" placeholder="Monkey Y" id="monkeyy">)
+    </p>
 </body>
 
 </html>
