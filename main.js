@@ -53,6 +53,7 @@ const update = () => {
     }
     // drawing background
     drawRectangle(0, 0, canvas.width, canvas.height, '#1df2e8', canvasContext);
+    drawLine(arrow.initX * pixelsPerMeter, canvas.height - (arrow.initY * pixelsPerMeter), monkey.initX * pixelsPerMeter, canvas.height - (monkey.initY * pixelsPerMeter), canvasContext);
     drawFloor();
     drawProjectile(monkey);
     drawProjectile(arrow);

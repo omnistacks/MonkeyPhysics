@@ -11,8 +11,16 @@ const drawCircle = (coordinateX, coordinateY, radius, color, canvasContext) => {
 };
 
 const drawText = (coordinateX, coordinateY, size, color, font, text, canvasContext) => {
-    canvasContext.font = size + " " + font;
+    canvasContext.font = size + ' ' + font;
     canvasContext.fillStyle = color;
     canvasContext.textAlign = "center";
     canvasContext.fillText(text, coordinateX, coordinateY);
+};
+
+const drawLine = (coordinateX, coordinateY, coordinateXEnd, coordinateYEnd, canvasContext) => {
+    canvasContext.strokeStyle = 'black';
+    canvasContext.beginPath();
+    canvasContext.moveTo(coordinateX, coordinateY);
+    canvasContext.lineTo(coordinateXEnd, coordinateYEnd);
+    canvasContext.stroke();
 };
