@@ -24,3 +24,5 @@ const drawLine = (coordinateX, coordinateY, coordinateXEnd, coordinateYEnd, canv
     canvasContext.lineTo(coordinateXEnd, coordinateYEnd);
     canvasContext.stroke();
 };
+
+module.exports = { drawRectangle, drawCircle, drawText, drawLine };

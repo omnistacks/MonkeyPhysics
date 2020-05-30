@@ -1,0 +1,24 @@
+{
+  "name": "monkey-physics",
+  "version": "1.0.0",
+  "description": "A programming simulation of the monkey physics problem: https://www.youtube.com/watch?v=cxvsHNRXLjw",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "webpack main.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniketgargya/monkey-physics.git"
+  },
+  "author": "Aniket Gargya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aniketgargya/monkey-physics/issues"
+  },
+  "homepage": "https://github.com/aniketgargya/monkey-physics#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

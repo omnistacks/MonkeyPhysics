@@ -1,3 +1,6 @@
+const { sin, cos } = require('./trig');
+const { drawCircle, drawRectangle, drawLine } = require('./shapes');
+
 let canvas;
 let canvasContext;
 
@@ -28,8 +31,8 @@ const monkey = {
 let time = 0;
 
 const calculatePosition = (projectile, time) => {
-    const positionX = (projectile.velocity * Math.Cos(projectile.angle) * time) + projectile.initX;
-    const positionY = (projectile.velocity * Math.Sin(projectile.angle) * time) + (0.5 * -9.8 * (time ** 2)) + projectile.initY;
+    const positionX = (projectile.velocity * cos(projectile.angle) * time) + projectile.initX;
+    const positionY = (projectile.velocity * sin(projectile.angle) * time) + (0.5 * -9.8 * (time ** 2)) + projectile.initY;
     return { x: positionX, y: positionY };
 };
 
@@ -87,6 +90,9 @@ const play = () => {
 window.onload = () => {
     canvas = document.getElementById('myCanvas');
     canvasContext = canvas.getContext('2d');
+    document.getElementById('play').onclick = play;
+    document.getElementById('restart').onclick = restart;
+    document.getElementById('pause').onclick = pause;
     drawRectangle(0, 0, canvas.width, canvas.height, 'black', canvasContext);
     setInterval(update, frameRate);
 };
